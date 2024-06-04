@@ -1,8 +1,8 @@
-let miNombre = ""
+//let miNombre = ""
 
 
-const url = "https://jsonplaceholder.typicode.com/users/1"
-const miPromesa = fetch(url)
+//const url = "https://jsonplaceholder.typicode.com/users/1"
+//const miPromesa = fetch(url)
 
 
 // async y await
@@ -18,26 +18,14 @@ const elContainer = document.getElementById("container")
 const urlRickandMorty = "https://rickandmortyapi.com/api/character/"
 
 // Modelo de funcion async...await
-/*
-const procesarPromesa = async () => {
+const procesarPromesa = async (url) => {
     try {
         const respuesta = await fetch(url)
 
         const info = await respuesta.json()
 
         console.log(info);
-    } catch (error) {
-        console.log("Hubo un error")
-    }
-}*/
-
-const procesarPromesa = async () => {
-    try {
-        const respuesta = await fetch(urlRickandMorty)
-
-        const info = await respuesta.json()
-
-        console.log(info);
+        return info;
     } catch (error) {
         console.log("Hubo un error")
     }
